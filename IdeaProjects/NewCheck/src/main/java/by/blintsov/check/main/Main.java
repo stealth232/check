@@ -31,5 +31,6 @@ public class Main {
         StringBuilder sb = check.showCheck(products);//сопоставляем полученные параметры с товарами и получаем чек
         System.out.println(sb);// выводим чек в консоль
         check.printCheck(sb);//печатаем в файл
+        check.printPDFCheck(sb);//печатаем в файл
     }
 }

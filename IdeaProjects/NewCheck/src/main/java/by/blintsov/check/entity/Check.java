@@ -2,10 +2,11 @@ package by.blintsov.check.entity;
 
 import by.blintsov.check.entity.impl.Product;
 import by.blintsov.check.exception.ProductException;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.io.*;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -150,11 +151,27 @@ public class Check {
     }
 
     public void printCheck(StringBuilder sb) throws ProductException {
-        File file = new File("D:\\check.txt");
+        File file = new File("src\\main\\resources\\check.txt");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             writer.write(sb.toString());
         } catch (IOException e) {
             throw new ProductException("Cant find filepath");
+        }
+    }
+
+    public void printPDFCheck(StringBuilder sb) throws ProductException{
+        try {
+            Document doc = new Document();
+            String filename = "src\\main\\resources\\check.pdf";
+            PdfWriter.getInstance(doc,new FileOutputStream(filename));
+            doc.open();
+            Paragraph paragraph = new Paragraph(sb.toString());
+            doc.add(paragraph);
+            doc.close();
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            throw new ProductException("Cant find file");
         }
     }
 }
