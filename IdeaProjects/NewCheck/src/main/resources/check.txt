@@ -1,0 +1,19 @@
+
+
+              CASH RECEIPT
+
+       supermarket 'The Two Geese' 
+      Thu Nov 19 21:54:04 MSK 2020
+
+QTY  DESCRIPTION            PRICE   TOTAL 
+100  Snickers               1,99   179,10 
+100  Mars                   1,59   143,10 
+135  Bounty                 1,29   174,15 
+100  Nuts                   2,29   229,00 
+100  Twix                   1,79   161,10 
+
+========================================= 
+ 
+Your Card with 5% Discount № 45186
+Your Discount                       98,02                     
+Total Price                        842,13                     
