@@ -9,8 +9,8 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) throws ProductException {
-        args = new String[]{"5-100", "1-100", "2-100","3-100","4-100", "3-35", "card-45186","4-7"};
+   public static void main(String[] args) throws ProductException {
+        args = new String[]{"5-100", "1-100", "2-100","3-100","4-100", "3-35", "4-7"};
         //args = new String[]{"src\\main\\resources\\file.txt"};
 
 

@@ -2,12 +2,12 @@ package by.blintsov.check.entity;
 
 import by.blintsov.check.entity.impl.Product;
 import by.blintsov.check.exception.ProductException;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.*;
+
 import java.io.*;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -151,7 +151,7 @@ public class Check {
     }
 
     public void printCheck(StringBuilder sb) throws ProductException {
-        File file = new File("src\\main\\resources\\check.txt");
+        File file = new File("D:\\check.txt");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             writer.write(sb.toString());
         } catch (IOException e) {
