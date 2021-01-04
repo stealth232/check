@@ -53,7 +53,7 @@ tasks.named('test') {
 
 task downloadFile(type: Download) {
     src 'https://github.com/stebadmitriy/files/raw/main/Clevertec_Template.pdf'
-    dest 'src/main/resources/templates'
+    dest 'C:\\Users\\Stealth\\IdeaProjects\\NewCheck\\src\\main\\resources\\templates'
 }
 apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: 'java'
