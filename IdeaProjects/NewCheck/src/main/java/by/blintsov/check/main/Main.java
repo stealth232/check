@@ -14,6 +14,7 @@ public class Main {
         //args = new String[]{"src\\main\\resources\\file.txt"};
 
 
+
         List<Product> products = new ArrayList<>(); //список продуктов
         products.add(new Bounty());
         products.add(new Snickers());

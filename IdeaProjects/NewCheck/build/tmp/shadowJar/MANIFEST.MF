@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: by.blintsov.check.main.Main
-Multi-Release: true
-

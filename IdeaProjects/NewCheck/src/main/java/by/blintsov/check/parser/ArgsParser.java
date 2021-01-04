@@ -15,6 +15,11 @@ public class ArgsParser {
 
     public List<String> parsParams(String[] args) throws ProductException {
         List<String> products;
+        try {
+            args[0].isBlank();
+        }catch(IndexOutOfBoundsException e){
+            throw new ProductException("Try buy something");
+        }
         if (args[0].contains("txt") || args[0].contains("xml")) {
             String filePath = args[0];
             try (FileReader fileReader = new FileReader(filePath);

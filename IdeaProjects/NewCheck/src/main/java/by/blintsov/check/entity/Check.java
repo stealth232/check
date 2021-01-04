@@ -159,19 +159,26 @@ public class Check {
         }
     }
 
-    public void printPDFCheck(StringBuilder sb) throws ProductException{
+    public void printPDFCheck(StringBuilder sb) throws ProductException {
         try {
+            FileOutputStream file = new FileOutputStream("D:\\check.pdf");
             Document doc = new Document();
-            String filename = "d:\\check.pdf";
-            PdfWriter.getInstance(doc,new FileOutputStream(filename));
+            PdfWriter writer = PdfWriter.getInstance(doc, file);
             doc.open();
-            Paragraph paragraph = new Paragraph(sb.toString());
-            doc.add(paragraph);
+            doc.newPage();
+            doc.add(new Paragraph("\n" + "\n" + "\n"));
+            doc.add(new Paragraph(sb.toString()));
+            PdfReader reader = new PdfReader(new FileInputStream("C:\\Users\\Stealth\\IdeaProjects\\NewCheck\\src\\main\\resources\\templates\\Clevertec_Template.pdf"));
+            PdfImportedPage page = writer.getImportedPage(reader, 1);
+            PdfContentByte cb = writer.getDirectContentUnder();
+            cb.addTemplate(page, 0, 0);
             doc.close();
         } catch (DocumentException e) {
-            e.printStackTrace();
+            throw new ProductException("Document problem");
         } catch (FileNotFoundException e) {
             throw new ProductException("Cant find file");
+        } catch (IOException e) {
+            throw new ProductException("IO problem");
         }
     }
     }
