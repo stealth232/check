@@ -162,7 +162,7 @@ public class Check {
     public void printPDFCheck(StringBuilder sb) throws ProductException{
         try {
             Document doc = new Document();
-            String filename = "src\\main\\resources\\check.pdf";
+            String filename = "d:\\check.pdf";
             PdfWriter.getInstance(doc,new FileOutputStream(filename));
             doc.open();
             Paragraph paragraph = new Paragraph(sb.toString());
@@ -174,4 +174,4 @@ public class Check {
             throw new ProductException("Cant find file");
         }
     }
-}
+    }

@@ -21,7 +21,6 @@ dependencies {
 
     testImplementation 'org.testng:testng:7.1.0'
     implementation 'javax.servlet:javax.servlet-api:4.0.1'
-    //compile 'com.itextpdf:itextg:5.5.9'
     implementation 'com.itextpdf:itextpdf:5.5.13.2'
 
 }
@@ -50,15 +49,5 @@ publishing {
 tasks.named('test') {
     useTestNG()
 }
-
-
-//task fatJar(type: Jar) {
-//    manifest {
-//        attributes 'Implementation-Title': 'Gradle Jar File Example',
-//                'Main-Class': 'by.blintsov.check.main.Main'
-//    }
-//    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-//    with jar
-//}
 
 apply plugin: "com.github.johnrengelman.shadow"

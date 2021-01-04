@@ -4,10 +4,10 @@ by/blintsov/check/parser/ArgsParser.java
  by.blintsov.check.parser.ArgsParser
 by/blintsov/check/entity/Bounty.java
  by.blintsov.check.entity.Bounty
-by/blintsov/check/servlets/MainServlet.java
- by.blintsov.check.servlets.MainServlet
-by/blintsov/check/main/Main.java
- by.blintsov.check.main.Main
+by/blintsov/check/creator/OrderCreator.java
+ by.blintsov.check.creator.OrderCreator
+by/blintsov/check/entity/Nuts.java
+ by.blintsov.check.entity.Nuts
 by/blintsov/check/exception/ProductException.java
  by.blintsov.check.exception.ProductException
 by/blintsov/check/entity/Mars.java
@@ -18,11 +18,11 @@ by/blintsov/check/entity/Snickers.java
  by.blintsov.check.entity.Snickers
 by/blintsov/check/parameters/ProductParameters.java
  by.blintsov.check.parameters.ProductParameters
-by/blintsov/check/entity/Check.java
- by.blintsov.check.entity.Check
 by/blintsov/check/entity/Card.java
  by.blintsov.check.entity.Card
-by/blintsov/check/creator/OrderCreator.java
- by.blintsov.check.creator.OrderCreator
-by/blintsov/check/entity/Nuts.java
- by.blintsov.check.entity.Nuts
+by/blintsov/check/servlets/MainServlet.java
+ by.blintsov.check.servlets.MainServlet
+by/blintsov/check/main/Main.java
+ by.blintsov.check.main.Main
+by/blintsov/check/entity/Check.java
+ by.blintsov.check.entity.Check
